@@ -1,0 +1,25 @@
+﻿<Window x:Class="Spot.SightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Spot"
+        mc:Ignorable="d"
+        Title="SightWindow" Height="450" Width="800"
+        Closed="SightWindow_OnClosed">
+    <Grid>
+        <Border x:Name="Container" BorderBrush="Black" BorderThickness="0" 
+                MouseWheel="Container_OnMouseWheel" 
+                MouseLeftButtonDown="Container_OnMouseLeftButtonDown"
+                MouseRightButtonDown="Container_OnMouseRightButtonDown"
+                MouseRightButtonUp="Container_OnMouseRightButtonUp"
+                MouseMove="Container_OnMouseMove"
+                >
+            <Image x:Name="SightImage" Margin="0" RenderOptions.BitmapScalingMode="NearestNeighbor">
+                <Image.RenderTransform>
+                    <MatrixTransform x:Name="SightMatrix"/>
+                </Image.RenderTransform>
+            </Image>
+        </Border>
+    </Grid>
+</Window>
