@@ -5,7 +5,7 @@ using System.Windows.Media;
 
 namespace Spot;
 
-public partial class SightWindow : Window
+public partial class SightWindow
 {
     private Point _mousePos;
     
