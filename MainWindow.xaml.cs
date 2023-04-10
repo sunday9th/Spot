@@ -35,6 +35,12 @@ public partial class MainWindow : Window
         mainWindow.Title = "SpotPanel";
 
         var monitorNum = Screen.AllScreens.Length;
+        if (monitorSequences.Count == 0)
+        {
+            monitorSequences = Enumerable.Range(0, monitorNum).ToList();
+        }
+        
+        
         var count = 0;
         count++;
         foreach (var monitorSequence in monitorSequences.Take(monitorNum))
@@ -43,7 +49,7 @@ public partial class MainWindow : Window
             {
                 MessageBox.Show(
                     mainWindow, 
-                    "不正确的显示器顺序配置，请排除后启动应用",
+                    "不正确的显示器顺序配置，请排除错误后启动应用",
                     "错误",MessageBoxButton.OK,
                     MessageBoxImage.Error);
                 Application.Current.Shutdown();
